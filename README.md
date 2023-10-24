@@ -6,3 +6,16 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## To run, 
+
+1. start up the server first (e.g. mern-stack-api)
+
+2. start up the client next:
+'''
+npm run dev
+'''
+3. In the browser:
+'''
+http://localhost:5173
+'''
