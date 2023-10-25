@@ -10,5 +10,6 @@ export async function delCity(cityId) {
 }
 
 export async function getCities(user) {
-    return sendRequest(`${BASE_URL}/${user._id}`)
+  if (user === undefined) return;
+  return sendRequest(`${BASE_URL}/${user._id}`)
 }
