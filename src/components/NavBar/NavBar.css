@@ -1,0 +1,26 @@
+#Navbar {
+  background-color: lightgreen;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: nowrap; */
+  /* justify-content: space-between; */
+  /* align-content: space-between; */
+  /* align-items: baseline; */
+  /* gap: 90px 180px; */
+}
+
+#nav-item1 {
+  color: white;
+  align-self: flex-start;
+}
+#nav-item2 {
+  color: green;
+  align-self: center;
+}
+#nav-item3 {
+  color: green;
+  align-self: flex-end;
+}
