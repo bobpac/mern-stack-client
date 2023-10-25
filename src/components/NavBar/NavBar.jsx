@@ -11,20 +11,12 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-        <div className="nav-wrapper green lighten-2">
-          <ul id="nav-modile" className="right hide-on-med-and-down">
-            <li>
-              <Link to='/'>Main Page</Link>
-              <Link to='/cities'>Add City</Link>
-            </li>
-            <li>
-              Welcome, {user.name}
-            </li>
-            <li>
-              <Link to='/' onClick={handleLogOut}>Log Out</Link>
-            </li>
-          </ul>
-        </div>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Welcome, {user.name}
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/'>Main Page</Link>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/cities/new'>Add City</Link>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/cities/delete'>Delete City</Link>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/cities'>Show City</Link>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/' onClick={handleLogOut}>Log Out</Link>
     </nav>
   );
 }
