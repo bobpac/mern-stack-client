@@ -20,6 +20,10 @@ function App() {
     getCities();
   },[]);
 
+  async function handleAddCity(cityObj) {
+    console.log(JSON.stringify(cityObj))
+  }
+
   return (
     <main>
       {user ?
@@ -27,7 +31,8 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path='/' element={<MainPage />} />
-            <Route path='/cities/new'    element={<AddCity />} />
+            <Route path='/cities/new'    
+                   element={<AddCity handleAddCity={handleAddCity}/>} />
             <Route path='/cities/delete' element={<DelCity />} />
             <Route path='/cities'        element={<ShowCity />} />
           </Routes>
