@@ -21,7 +21,7 @@ function App() {
   },[]);
 
   async function handleAddCity(cityObj) {
-    console.log(JSON.stringify(cityObj))
+    console.log(`handleAddCity - cityObj = ${JSON.stringify(cityObj)}`)
   }
 
   return (
