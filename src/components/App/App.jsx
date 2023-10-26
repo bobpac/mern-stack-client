@@ -14,14 +14,14 @@ function App() {
   const [cities, setCities] = useState([])
   useEffect(function(){
     async function getCities() {
-      const cities = await citiesAPI.getCities();
+      const cities = await citiesAPI.getCities(user);
       setCities(cities);
     }
     getCities();
   },[]);
 
-  async function handleAddCity(cityObj) {
-    console.log(`handleAddCity - cityObj = ${JSON.stringify(cityObj)}`)
+  async function handleAddCity(city) {
+    setCities([...cities, city]);
   }
 
   return (

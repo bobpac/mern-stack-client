@@ -17,8 +17,6 @@ export async function getCities(user) {
 }
 
 export async function getCityInfoFromZipCode(zipCode) {
-  console.log(`getCityInfoFromZipCode - zipCode = ${zipCode}`)
   const res =  await sendRequest(`${BASE_URL}/zipcode/${zipCode}`)  
-  console.log(`getCityInfoFromZipCode - res.then = ${res.then}`)
   return res;
 }
