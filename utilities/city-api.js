@@ -13,7 +13,7 @@ export async function delCity(cityId) {
 
 export async function getCities(user) {
   if (user === undefined) return;
-  return sendRequest(`${BASE_URL}/${user._id}`)
+  return sendRequest(`${BASE_URL}`)
 }
 
 export async function getCityInfoFromZipCode(zipCode) {
