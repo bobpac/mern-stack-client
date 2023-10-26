@@ -34,7 +34,7 @@ function App() {
             <Route path='/cities/new'    
                    element={<AddCity handleAddCity={handleAddCity}/>} />
             <Route path='/cities/delete' element={<DelCity />} />
-            <Route path='/cities'        element={<ShowCity />} />
+            <Route path='/cities'        element={<ShowCity cities={cities}/>} />
           </Routes>
         </> :
         <AuthPage setUser={setUser} />

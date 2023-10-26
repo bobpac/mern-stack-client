@@ -15,7 +15,7 @@ export default function NavBar({ user, setUser }) {
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/'>Main Page</Link>
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/cities/new'>Add City</Link>
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/cities/delete'>Delete City</Link>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/cities'>Show City</Link>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/cities'>Show Cities</Link>
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/' onClick={handleLogOut}>Log Out</Link>
     </nav>
   );
