@@ -30,11 +30,10 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path='/' element={<MainPage />} />
             <Route path='/cities/new'    
                    element={<AddCity handleAddCity={handleAddCity}/>} />
-            <Route path='/cities/delete' element={<DelCity />} />
-            <Route path='/cities'        element={<ShowCity cities={cities}/>} />
+            <Route path='/cities/delete' element={<DelCity  cities={cities} user/>} />
+            <Route path='/cities'        element={<ShowCity cities={cities} user/>} />
           </Routes>
         </> :
         <AuthPage setUser={setUser} />

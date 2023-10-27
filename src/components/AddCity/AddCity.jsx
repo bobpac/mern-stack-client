@@ -10,6 +10,11 @@ export default function AddCity({ handleAddCity }) {
     const cityObj = await getCityInfoFromZipCode(zipCode)
     // console.log(`handleSubmit - cityObj=${JSON.stringify(cityObj)}`)
     handleAddCity(cityObj)
+    setZipCode("")
+  }
+  function handleDataChange(evt) {
+    // const newSkillData = { ...inputData, [evt.target.name]: evt.target.value };
+    setZipCode(evt.target.value);
   }
   return (
     <>
@@ -21,7 +26,8 @@ export default function AddCity({ handleAddCity }) {
               maxLength="5"
               minLength="5"
               id="zipcode"
-              onChange={evt => setZipCode(evt.target.value)} 
+              onChange={handleDataChange}
+              value={zipCode}
               required />
         <input type="submit" value="Add City" />
       </form>

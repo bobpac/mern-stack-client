@@ -1,20 +1,33 @@
 // import { useState, useEffect } from 'react'
 // import { Link } from 'react-router-dom'
-import City from '../City/City'
+import { useState, useEffect } from 'react'
+import * as citiesAPI from '../../../utilities/city-api'
+export default function ShowCity({ user}) {
 
-export default function ShowCity({ cities }) {
+  const [cities, setCities] = useState([]);
+  useEffect(function(){
+    async function getCities() {
+      const cities = await citiesAPI.getCities(user);
+      setCities(cities);
+    }
+    getCities();
+  },[]);
 
-  // cities.length ? console.log(`cities = ${JSON.stringify(cities)}`) : console.log('No cities yet');
-  
-  const myCities = cities.map(city =>
-    <City 
-       key = {city._id}
-       city = {city.city}
-       state = {city.state_code}/>
-    )
+  async function handleShow(evt) {
+    console.log(`handleShow - evt.target.id=${evt.target.id}`)
+    const city = await citiesAPI.getWeatherForCity(evt.target.id)
+    console.log(`handleShow - city = ${JSON.stringify(city)}`)
+  }
+
   return (
     <>
-       {myCities}
+    {cities.map(city =>(
+      <div key={city._id}>
+        {city.city}  , {city.state_code} <button onClick={handleShow} id={city._id}> Get Weather </button>
+      </div> )   
+    )}
+
     </>
   )
+  
 }

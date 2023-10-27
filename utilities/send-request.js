@@ -14,6 +14,8 @@ export default async function sendRequest(url, method = 'GET', payload = null) {
         options.headers.Authorization = `Bearer ${token}`
     }
     const res = await fetch(url, options)
-    if (res.ok) return res.json()
+    const data = await res.json();
+    console.log(data);
+    if (res.ok) return data;
     throw new Error('Bad Request')
 }

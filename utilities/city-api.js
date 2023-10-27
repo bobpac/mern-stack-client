@@ -20,3 +20,9 @@ export async function getCityInfoFromZipCode(zipCode) {
   const res =  await sendRequest(`${BASE_URL}/zipcode/${zipCode}`)  
   return res;
 }
+
+export async function getWeatherForCity(id) {
+  console.log(`getWeatherForCity - id=${id}`)
+  const res =  await sendRequest(`${BASE_URL}/${id}`)  
+  console.log(`getWeatherForCity - res=${res}`)
+}
