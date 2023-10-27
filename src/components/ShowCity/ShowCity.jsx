@@ -1,10 +1,12 @@
-// import { useState, useEffect } from 'react'
 // import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import * as citiesAPI from '../../../utilities/city-api'
+
 export default function ShowCity({ user}) {
 
-  const [cities, setCities] = useState([]);
+  const [cities, setCities] = useState([])
+  const [weather, setWeather ] = useState([])
+
   useEffect(function(){
     async function getCities() {
       const cities = await citiesAPI.getCities(user);
@@ -14,9 +16,8 @@ export default function ShowCity({ user}) {
   },[]);
 
   async function handleShow(evt) {
-    console.log(`handleShow - evt.target.id=${evt.target.id}`)
-    const city = await citiesAPI.getWeatherForCity(evt.target.id)
-    console.log(`handleShow - city = ${JSON.stringify(city)}`)
+    const weather = await citiesAPI.getWeatherForCity(evt.target.id)
+    console.log(weather)
   }
 
   return (

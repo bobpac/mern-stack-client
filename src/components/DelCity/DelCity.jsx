@@ -13,9 +13,7 @@ export default function DelCity({ user}) {
 
   async function handleDelete(evt) {
     const deletedCity = await citiesAPI.delCity(evt.target.id)
-    console.log(deletedCity)
     const updatedCities = cities.filter(city => city._id != deletedCity._id)
-    console.log(updatedCities)
     setCities(updatedCities)
   }
 
