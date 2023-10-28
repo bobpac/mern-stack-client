@@ -1,0 +1,17 @@
+.weatherDay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weatherContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}

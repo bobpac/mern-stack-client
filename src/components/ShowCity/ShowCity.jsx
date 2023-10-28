@@ -1,6 +1,7 @@
 // import { Link } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import * as citiesAPI from "../../../utilities/city-api";
+import "./ShowCity.css";
 
 export default function ShowCity({ user }) {
   const [cities, setCities] = useState([]);
@@ -17,9 +18,13 @@ export default function ShowCity({ user }) {
   async function handleShow(evt) {
     evt.preventDefault();
     const results = await citiesAPI.getWeatherForCity(evt.target.id);
-    console.log(results);
+    delete results.daily[7];
+    setWeather(results.daily);
+    console.log(results.daily);
   }
-
+  function getIconPath(icon) {
+    return `../../../public/images/${icon}@2x.png`;
+  }
   return (
     <>
       {cities.map((city) => (
@@ -31,12 +36,19 @@ export default function ShowCity({ user }) {
           </button>
         </div>
       ))}
-      <h1> Weather for City </h1>
-      {/* {weatherDays.map(day => (
-      <div key={day.key}>
-        {day.description} High: {day.high} Low: {day.low}
-      </div> )
-    )} */}
+      <center><h1> 7-day Forecast </h1></center>
+      <div className="weatherContainer">
+        {weather.map((day) => (
+          <div className="weatherDay" key={day.key}>
+            <img src={getIconPath(day.weather[0].icon)}></img>
+            <br />
+            {/* {day.weather[0].description} <br /> */}
+            High: {day.temp.max} <br />
+            Low: {day.temp.min} <br />
+            <br />
+          </div>
+        ))}
+      </div>
     </>
   );
 }
