@@ -1,7 +1,7 @@
-import "./AddCity.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCityInfoFromZipCode } from "../../../utilities/city-api";
+import "./AddCity.css";
 
 export default function AddCity({ handleAddCity, cities, user }) {
   const [zipCode, setZipCode] = useState("");
@@ -27,7 +27,6 @@ export default function AddCity({ handleAddCity, cities, user }) {
             <form autoComplete="off" onSubmit={handleSubmit}>
               <input
                 type="text"
-                name={zipCode}
                 autoFocus
                 size="5"
                 maxLength="5"
