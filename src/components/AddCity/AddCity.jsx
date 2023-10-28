@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { getCityInfoFromZipCode } from "../../../utilities/city-api";
 import "./AddCity.css";
 
-export default function AddCity({ handleAddCity, cities, user }) {
+export default function AddCity({ handleAddCity }) {
   const [zipCode, setZipCode] = useState("");
   const navigate = useNavigate()
 

@@ -35,7 +35,7 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path='/cities/new'    
-                   element={<AddCity handleAddCity={handleAddCity} cities={cities} user={user}/>} />
+                   element={<AddCity handleAddCity={handleAddCity}                           />} />
             <Route path='/cities/delete' 
                    element={<DelCity handleDelCity={handleDelCity} cities={cities} user={user}/>} />
             <Route path='/cities'        
