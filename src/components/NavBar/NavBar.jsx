@@ -11,7 +11,7 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <nav>
+    <nav className=' blue darken-1'>
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Welcome, {user.name}
 
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
