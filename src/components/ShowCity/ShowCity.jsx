@@ -54,11 +54,11 @@ export default function ShowCity({ user }) {
       <div className="row">
         <div className="col s12 m4 l3">
           <center>
-            <h1> Cities </h1>
+            <h1 class="cityTitles"> Cities </h1>
           </center>
           <div className="cityContainer">
             {cities.map((city) => (
-              <div className="cityNames" key={city._id}>
+              <div className="cityTitles cityNames" key={city._id}>
                 {city.city} , {city.state_code}{" "}
                 <button
                   className="GetWeatherButton"
@@ -75,7 +75,7 @@ export default function ShowCity({ user }) {
 
         <div className="col s12 m8 l9">
           <center>
-            <h1 id="cityName"> 7-day Forecast </h1>
+            <h1 className="cityTitles" id="cityName"> 7-day Forecast </h1>
           </center>
           <div className="weatherContainer" key={99}>
             {weather.map((day) => (
