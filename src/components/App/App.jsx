@@ -13,19 +13,10 @@ function App() {
   const [user, setUser] = useState(getUser())
   const [cities, setCities] = useState([])
 
-  async function handleGetCities() {
-    const allCities = await citiesAPI.getCities(user);
-    setCities(allCities);
-  }
+
 
   async function handleAddCity(city) {
     setCities([...cities, city]);
-  }
-
-  async function handleDelCity(evt) {
-    const deletedCity = await citiesAPI.delCity(evt.target.id)
-    const updatedCities = cities.filter(city => city._id != deletedCity._id)
-    setCities(updatedCities)
   }
 
   return (
@@ -35,11 +26,11 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path='/cities/new'    
-                   element={<AddCity handleAddCity={handleAddCity}                           />} />
+                   element={<AddCity  handleAddCity={handleAddCity} />} />
             <Route path='/cities/delete' 
-                   element={<DelCity handleDelCity={handleDelCity} cities={cities} user={user}/>} />
+                   element={<DelCity  user={user}/>} />
             <Route path='/cities'        
-                   element={<ShowCity                                              user={user}/>} />
+                   element={<ShowCity user={user}/>} />
           </Routes>
         </> :
         <AuthPage setUser={setUser} />
