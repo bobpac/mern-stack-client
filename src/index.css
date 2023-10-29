@@ -2,7 +2,7 @@ body {
   background-image: url("https://imgur.com/eCgV28U.jpg");
 }
 
-.cityTitles {
+.cityTitles, .loginForm {
   color: white;
 }
 
@@ -28,11 +28,18 @@ body {
   margin-bottom: 20px;
 }
 
-.GetWeatherButton, .DeleteCityButton, .AddCityButton {
+button, .AddCityButton {
   background-color: #1e88e5;
   color: white;
-  margin-left: 10px;
   border-color: lightgray;
   height: 30px;
   min-width: 100px;
+}
+
+.GetWeatherButton, .AddCityButton, .DeleteCityButton {
+  margin-left: 20px;
+}
+
+.form-container > input {
+  background-color: white;
 }
