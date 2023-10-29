@@ -5,14 +5,14 @@ import "./AddCity.css";
 
 export default function AddCity({ handleAddCity }) {
   const [zipCode, setZipCode] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   async function handleSubmit(evt) {
-    evt.preventDefault()
-    const cityObj = await getCityInfoFromZipCode(zipCode)
+    evt.preventDefault();
+    const cityObj = await getCityInfoFromZipCode(zipCode);
     handleAddCity(cityObj);
-    setZipCode("")
-    navigate('/cities')
+    setZipCode("");
+    navigate("/cities");
   }
 
   function handleDataChange(evt) {
@@ -20,27 +20,25 @@ export default function AddCity({ handleAddCity }) {
   }
 
   return (
-    <>
-      <div className="container">
-        <div className="row">
-          <div className="col s3">
-            <form autoComplete="off" onSubmit={handleSubmit}>
-              <input
-                type="text"
-                autoFocus
-                size="5"
-                maxLength="5"
-                minLength="5"
-                id="zipcode"
-                onChange={handleDataChange}
-                value={zipCode}
-                required
-              />
-              <input type="submit" value="Add City" />
-            </form>
-          </div>
+    <div className="row">
+      <div className="col s12 m4 l3">
+        <center>
+          <h1 class="cityTitles"> Add City </h1>
+        </center>
+
+        <div className="cityContainer">
+          <form className="cityNames" autoComplete="off" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              autoFocus
+              id="zipcode"
+              onChange={handleDataChange}
+              value={zipCode}
+              required
+            /> <input className="AddCityButton" type="submit" value="Add City" />
+          </form>
         </div>
       </div>
-    </>
+    </div>
   );
 }
