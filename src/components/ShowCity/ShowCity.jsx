@@ -39,14 +39,12 @@ export default function ShowCity({ user }) {
     // insert the name of the day
     setDayOfTheWeek(results.daily);
     setWeather(results.daily);
-    const cityNameId = document.getElementById('cityName');
+    const cityNameId = document.getElementById("cityName");
     cityNameId.innerText = results.location;
-
-    console.log(results.daily);
   }
 
   function getIconPath(icon) {
-    return `../../../public/images/${icon}@2x.png`;
+    return `../../../images/${icon}@2x.png`;
   }
 
   return (
@@ -54,7 +52,7 @@ export default function ShowCity({ user }) {
       <div className="row">
         <div className="col s12 m4 l3">
           <center>
-            <h1 class="cityTitles"> Cities </h1>
+            <h1 className="cityTitles"> Cities </h1>
           </center>
           <div className="cityContainer">
             {cities.map((city) => (
@@ -75,7 +73,10 @@ export default function ShowCity({ user }) {
 
         <div className="col s12 m8 l9">
           <center>
-            <h1 className="cityTitles" id="cityName"> 7-day Forecast </h1>
+            <h1 className="cityTitles" id="cityName">
+              {" "}
+              7-day Forecast{" "}
+            </h1>
           </center>
           <div className="weatherContainer" key={99}>
             {weather.map((day) => (

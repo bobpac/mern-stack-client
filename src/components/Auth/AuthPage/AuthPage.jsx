@@ -8,8 +8,8 @@ export default function AuthPage({ setUser }) {
   return (
     <main>
       <div className="authPage">
-      <img id="openWeatherLogo" src="../../../public/images/logo_white_cropped.png"></img>
-      <button onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log in' : 'Sign Up'}</button>
+      <img id="openWeatherLogo" src="../../../images/logo_white_cropped.png"></img>
+      <button id="loginSignupButton" onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log in' : 'Sign Up'}</button>
       {showSignUp ?
         <SignUpForm setUser={setUser} />
         :

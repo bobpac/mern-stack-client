@@ -40,6 +40,6 @@ button, .AddCityButton {
   margin-left: 20px;
 }
 
-.form-container > input {
-  background-color: white;
+.form-container {
+  background-color: black;
 }
