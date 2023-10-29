@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { getUser } from '../../../utilities/user-services'
 import * as citiesAPI from '../../../utilities/city-api'
 import AuthPage from '../Auth/AuthPage/AuthPage'
@@ -31,6 +31,8 @@ function App() {
                    element={<DelCity  user={user}/>} />
             <Route path='/cities'        
                    element={<ShowCity user={user}/>} />
+            <Route path='*'
+                   element={<Navigate to="/cities" replace />} /> 
           </Routes>
         </> :
         <AuthPage setUser={setUser} />

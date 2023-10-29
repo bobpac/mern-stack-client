@@ -24,3 +24,7 @@
   color: green;
   align-self: flex-end;
 }
+
+#openWeatherLogoNavbar {
+  margin-top: 10px;
+}
