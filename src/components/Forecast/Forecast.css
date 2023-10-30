@@ -1,4 +1,4 @@
-.weatherDay {
+.forecastDay {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,10 +9,10 @@
   background-color: white;
 }
 
-.weatherContainer {
+.forecastContainer {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   align-items: center;
   justify-items: center;
   justify-content: center;

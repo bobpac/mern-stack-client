@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import * as citiesAPI from "../../../utilities/city-api";
 import "./Forecast.css";
@@ -54,17 +53,17 @@ export default function Forecast({ user }) {
           <center>
             <h1 className="cityTitles"> Cities </h1>
           </center>
-          <div className="cityWeatherContainer">
+          <div className="cityForecastContainer">
             {cities.map((city) => (
               <div className="cityTitles cityNames" key={city._id}>
                 {city.city} , {city.state_code}{" "}
                 <button
-                  className="GetWeatherButton"
+                  className="GetForecastButton"
                   onClick={handleShow}
                   id={city._id}
                 >
                   {" "}
-                  Get Weather
+                  Get Forecast
                 </button>
               </div>
             ))}
@@ -77,9 +76,9 @@ export default function Forecast({ user }) {
               7-day Forecast{" "}
             </h1>
           </center>
-          <div className="weatherContainer" key={99}>
+          <div className="forecastContainer" key={99}>
             {weather.map((day) => (
-              <div className="weatherDay" key={day.key}>
+              <div className="forecastDay" key={day.key}>
                 {day.dayOfTheWeek} <br />
                 <img src={getIconPath(day.weather[0].icon)}></img>
                 <br />
