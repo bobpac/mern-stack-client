@@ -20,10 +20,10 @@ export default function NavBar({ user, setUser }) {
         </a>
         <ul id="nav-mobile" className="right">
           <li>
-            <Link to="/cities/new">Settings</Link>
+            <Link to="/cities/settings">Settings</Link>
           </li>
           <li>
-            <Link to="/cities">Weather</Link>
+            <Link to="/cities/weather">Weather</Link>
           </li>
           <li>
             <Link to="/" onClick={handleLogOut}>
