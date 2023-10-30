@@ -3,19 +3,11 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { getUser } from '../../../utilities/user-services'
 import AuthPage from '../Auth/AuthPage/AuthPage'
 import NavBar from '../NavBar/NavBar'
-import AddCity from '../AddCity/AddCity'
-import DelCity from '../DelCity/DelCity'
-import ShowCity from '../ShowCity/ShowCity'
+import AddCity from '../Settings/Settings'
+import ShowCity from '../Weather/Weather'
 
 function App() {
   const [user, setUser] = useState(getUser())
-  const [cities, setCities] = useState([])
-
-
-
-  async function handleAddCity(city) {
-    setCities([...cities, city]);
-  }
 
   return (
     <main>
@@ -24,9 +16,7 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path='/cities/new'    
-                   element={<AddCity  handleAddCity={handleAddCity} />} />
-            <Route path='/cities/delete' 
-                   element={<DelCity  user={user}/>} />
+                   element={<AddCity  user={user}/>} />
             <Route path='/cities'        
                    element={<ShowCity user={user}/>} />
             <Route path='*'

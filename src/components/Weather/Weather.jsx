@@ -1,9 +1,9 @@
 // import { Link } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import * as citiesAPI from "../../../utilities/city-api";
-import "./ShowCity.css";
+import "./Weather.css";
 
-export default function ShowCity({ user }) {
+export default function Weather({ user }) {
   const [cities, setCities] = useState([]);
   const [weather, setWeather] = useState([]);
 
@@ -54,7 +54,7 @@ export default function ShowCity({ user }) {
           <center>
             <h1 className="cityTitles"> Cities </h1>
           </center>
-          <div className="cityContainer">
+          <div className="cityWeatherContainer">
             {cities.map((city) => (
               <div className="cityTitles cityNames" key={city._id}>
                 {city.city} , {city.state_code}{" "}
@@ -64,13 +64,12 @@ export default function ShowCity({ user }) {
                   id={city._id}
                 >
                   {" "}
-                  Get Weather{" "}
+                  Get Weather
                 </button>
               </div>
             ))}
           </div>
         </div>
-
         <div className="col s12 m8 l9">
           <center>
             <h1 className="cityTitles" id="cityName">
