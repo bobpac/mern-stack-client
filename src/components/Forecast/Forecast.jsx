@@ -1,9 +1,9 @@
 // import { Link } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import * as citiesAPI from "../../../utilities/city-api";
-import "./Weather.css";
+import "./Forecast.css";
 
-export default function Weather({ user }) {
+export default function Forecast({ user }) {
   const [cities, setCities] = useState([]);
   const [weather, setWeather] = useState([]);
 

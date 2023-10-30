@@ -23,7 +23,7 @@ export default function NavBar({ user, setUser }) {
             <Link to="/cities/settings">Settings</Link>
           </li>
           <li>
-            <Link to="/cities/weather">Weather</Link>
+            <Link to="/cities/forecast">Forecast</Link>
           </li>
           <li>
             <Link to="/" onClick={handleLogOut}>
