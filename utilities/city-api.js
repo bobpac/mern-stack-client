@@ -1,6 +1,6 @@
 import sendRequest from './send-request'
 
-const BASE_URL = 'http://localhost:4741/cities'
+const BASE_URL = 'https://weather-client.onrender.com/cities'
 
 export async function addCity(cityData) {
   const res = await sendRequest(BASE_URL, 'POST', cityData)
