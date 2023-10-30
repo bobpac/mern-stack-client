@@ -1,5 +1,6 @@
 body {
   background-image: url("https://imgur.com/eCgV28U.jpg");
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .cityTitles, .loginForm {
