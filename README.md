@@ -15,7 +15,16 @@ Enter a 5-digit zip code of cities you wish to get the forecast for. When finish
 
 ![Forecast](./public/images/Forecast.png)
 
-## 
+## Technologies
+- HTML
+- CSS
+- Javascript
+- React
+- Express
+- Mongoose/MongoDB
+- Node
+- OpenWeather
+- Zipcodestack
 
 ## Installation
 After cloning,
