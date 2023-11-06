@@ -23,6 +23,7 @@ export default async function sendRequestCORS(url, method = 'GET', payload = nul
       const res = await fetch(url, options)
       // if (res.ok) return res.json()
       const data = await res.json();
+      console.log(data);
       if (res.ok) return data;
   } catch (error) {
       console.log(`sendRequest: error = ${error}`)
