@@ -1,5 +1,9 @@
 #  WeatherApp
 WeatherApp is website geared towards giving each user the current 7-day forecast for each city they enter (given the zip code). The forecast is retrieved from http://openweathermap.org
+
+## Running WeatherApp
+Go [here](https://weather-client.onrender.com) to start WeatherApp.
+
 ## Screen Shots
 
 After first loading, click on the "Sign Up" button to create a new user.  You will see this screen:
@@ -25,6 +29,7 @@ Enter a 5-digit zip code of cities you wish to get the forecast for. When finish
 - Node
 - OpenWeather
 - Zipcodestack
+- Materialize
 
 ## Installation
 After cloning,
