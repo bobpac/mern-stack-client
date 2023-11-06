@@ -1,4 +1,5 @@
 import sendRequest from './send-request'
+import sendRequestCORS from './send-requestCORS';
 
 const BASE_URL = 'https://weather-server-e4ww.onrender.com/cities'
 // const BASE_URL = 'http://localhost:4741/cities'
