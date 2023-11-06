@@ -20,11 +20,11 @@ export async function getCities(user) {
 }
 
 export async function getCityInfoFromZipCode(zipCode) {
-  const res = await sendRequest(`${BASE_URL}/zipcode/${zipCode}`)  
+  const res = await sendRequestCORS(`${BASE_URL}/zipcode/${zipCode}`)  
   return res
 }
 
 export async function getWeatherForCity(id) {
-  const res = await sendRequest(`${BASE_URL}/${id}`)
+  const res = await sendRequestCORS(`${BASE_URL}/${id}`)
   return res
 }
