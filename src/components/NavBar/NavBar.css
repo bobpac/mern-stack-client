@@ -12,7 +12,7 @@
   /* gap: 90px 180px; */
 }
 
-#nav-item1 {
+/* #nav-item1 {
   color: white;
   align-self: flex-start;
 }
@@ -23,8 +23,15 @@
 #nav-item3 {
   color: green;
   align-self: flex-end;
-}
+} */
 
 #openWeatherLogoNavbar {
   margin-top: 10px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .nav-wrapper {
+    font-size: 0.8em;;
+  }
 }

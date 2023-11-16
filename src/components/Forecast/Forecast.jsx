@@ -50,23 +50,23 @@ export default function Forecast({ user }) {
     <>
       <div className="row">
         <div className="col s12 m4 l3">
-          <center>
+          <div className="cities">
             <h1 className="cityTitles"> Cities </h1>
-          </center>
-          <div className="cityForecastContainer">
-            {cities.map((city) => (
-              <div className="cityTitles cityNames" key={city._id}>
-                {city.city} , {city.state_code}{" "}
-                <button
-                  className="GetForecastButton"
-                  onClick={handleShow}
-                  id={city._id}
-                >
-                  {" "}
-                  Get Forecast
-                </button>
-              </div>
-            ))}
+            <div className="cityForecastContainer">
+              {cities.map((city) => (
+                <div className="cityTitles cityNames" key={city._id}>
+                  {city.city} , {city.state_code}{" "}
+                  <button
+                    className="GetForecastButton"
+                    onClick={handleShow}
+                    id={city._id}
+                  >
+                    {" "}
+                    Get Forecast
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="col s12 m8 l9">

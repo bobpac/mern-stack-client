@@ -11,14 +11,14 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav className=" blue darken-1">
-      <div className="nav-wrapper">
+      <div className="nav-wrapper ">
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Welcome, {user.name}
         <a href="" className="brand-logo center">
           <img id="openWeatherLogoNavbar" width="100" height="45"
               src="../../../images/logo_white_cropped.png">
           </img>
         </a>
-        <ul id="nav-mobile" className="right">
+        <ul id="nav-mobile" className="right xl">
           <li>
             <Link to="/cities/settings">Settings</Link>
           </li>
